@@ -10,11 +10,11 @@ for line in f:
     name.append(entries[0])
     score.append(entries[1])
 
-dictionary = dict(zip(name,score))
+ratings_dict = dict(zip(name,score))
 
-keys_list = dictionary.keys()
+keys_list = ratings_dict.keys()
 
 keys_list.sort()
 
-for restaurant in keys_list:
-    print "Restaurant %s received a rating of %s." % (name, score)
+for key in keys_list:
+    print "Restaurant %s received a rating of %s." % (key, ratings_dict[key])
